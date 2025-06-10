@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>Interview Scheduled</title>
+    <style type="text/css" rel="stylesheet" media="all">
+        /* Base ------------------------------ */
+        @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&display=swap");
+
+        body {
+            width: 100% !important;
+            height: 100%;
+            margin: 0;
+            -webkit-text-size-adjust: none;
+            background-color: #f2f4f6;
+            color: #51545e;
+        }
+
+        a {
+            color: #3869d4;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        td {
+            word-break: break-word;
+        }
+
+        .preheader {
+            display: none !important;
+            visibility: hidden;
+            mso-hide: all;
+            font-size: 1px;
+            line-height: 1px;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        /* Type ------------------------------ */
+        body,
+        td,
+        th {
+            font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333333;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        p {
+            margin: 0.5em 0 1em;
+            font-size: 16px;
+            color: #51545e;
+        }
+
+            p.sub {
+                font-size: 13px;
+                color: #a8aaaf;
+            }
+
+        /* Utilities ------------------------------ */
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        /* Buttons ------------------------------ */
+        .button {
+            display: inline-block;
+            background-color: #22bc66;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+            transition: background-color 0.2s ease;
+        }
+
+            .button:hover {
+                background-color: #1ea854;
+            }
+
+        @media only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+                text-align: center !important;
+            }
+        }
+
+        /* Details Table ------------------------------ */
+        .details-table {
+            width: 100%;
+            margin: 20px 0;
+            background-color: #f4f4f7;
+            border-collapse: collapse;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .details-table th,
+            .details-table td {
+                padding: 14px 20px;
+                font-size: 15px;
+                text-align: left;
+                border-bottom: 1px solid #eaeaec;
+            }
+
+            .details-table th {
+                font-weight: 600;
+                color: #333333;
+                width: 30%;
+                background-color: #eaeaec;
+            }
+
+            .details-table td {
+                color: #51545e;
+            }
+
+            .details-table tr:last-child td {
+                border-bottom: none;
+            }
+
+        /* Divider ------------------------------ */
+        .divider {
+            border-top: 1px solid #eaeaec;
+            margin: 20px 0;
+        }
+
+        /* Email Wrapper ------------------------------ */
+        .email-wrapper {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f4f6;
+        }
+
+        .email-content {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Masthead ----------------------- */
+        .email-masthead {
+            padding: 30px 0;
+            text-align: center;
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaec;
+        }
+
+        .email-masthead_name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #a8aaaf;
+            text-decoration: none;
+            text-shadow: 0 1px 0 white;
+        }
+
+        /* Body ------------------------------ */
+        .email-body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-body_inner {
+            width: 570px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-cell {
+            padding: 40px;
+        }
+
+        /* Footer ------------------------------ */
+        .email-footer {
+            width: 570px;
+            margin: 20px auto 0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            .email-footer p {
+                color: #a8aaaf;
+                font-size: 13px;
+                margin: 0.5em 0;
+            }
+
+            .email-footer a {
+                color: #3869d4;
+            }
+
+                .email-footer a:hover {
+                    color: #2b54a8;
+                }
+
+        /* Media Queries ------------------------------ */
+        @media only screen and (max-width: 600px) {
+            .email-body_inner,
+            .email-footer {
+                width: 100% !important;
+            }
+
+            .content-cell {
+                padding: 20px !important;
+            }
+
+            .details-table th,
+            .details-table td {
+                display: block;
+                width: 100%;
+                padding: 10px 15px;
+            }
+
+            .details-table th {
+                background-color: #eaeaec;
+                border-bottom: none;
+            }
+
+            .details-table td {
+                border-bottom: 1px solid #eaeaec;
+            }
+
+            .details-table tr:last-child td {
+                border-bottom: none;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body,
+            .email-body,
+            .email-content,
+            .email-wrapper,
+            .email-masthead,
+            .email-footer {
+                background-color: #333333 !important;
+                color: #fff !important;
+            }
+
+            .email-body_inner {
+                background-color: #444444 !important;
+            }
+
+            .details-table {
+                background-color: #3a3a3a !important;
+            }
+
+                .details-table th {
+                    background-color: #555555 !important;
+                }
+
+                .details-table td {
+                    border-bottom: 1px solid #555555 !important;
+                }
+
+                .details-table tr:last-child td {
+                    border-bottom: none !important;
+                }
+
+                h1,
+                p,
+                .details-table th,
+                .details-table td {
+                    color: #fff !important;
+                }
+
+                    p.sub,
+                    .email-footer p,
+                    .email-masthead_name {
+                        color: #a8aaaf !important;
+                    }
+
+            .divider {
+                border-top: 1px solid #555555 !important;
+            }
+
+            .button {
+                background-color: #22bc66 !important;
+            }
+
+                .button:hover {
+                    background-color: #1ea854 !important;
+                }
+
+            a,
+            .email-footer a {
+                color: #3869d4 !important;
+            }
+
+                a:hover,
+                .email-footer a:hover {
+                    color: #2b54a8 !important;
+                }
+        }
+
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+    </style>
+    <!--[if mso]>
+    <style type="text/css">
+        .f-fallback {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+    <span class="preheader">You have been accepted for an interview. Check your details below.</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td align="center">
+                <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td class="email-masthead">
+                            <a href="https://example.com" class="f-fallback email-masthead_name">CareerGuidance</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="email-body" width="570" cellpadding="0" cellspacing="0">
+                            <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                                <tr>
+                                    <td class="content-cell">
+                                        <div class="f-fallback">
+                                            <h1>Hi {{applicantName}},</h1>
+                                            <p>We’re excited to inform you that you’ve been selected for an interview! Below are the details of your scheduled session:</p>
+                                            <table class="details-table" role="presentation">
+                                                <tr>
+                                                    <th>Interviewer</th>
+                                                    <td>{{interviewerName}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Interview Title</th>
+                                                    <td>{{interviewTitle}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <td>{{interviewDate}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Time</th>
+                                                    <td>{{interviewTime}}</td>
+                                                </tr>
+                                            </table>
+                                            <p>Please click the button below to join the meeting on time. We wish you the best of luck!</p>
+                                            <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr>
+                                                    <td align="center">
+                                                        <a href="{{meetingLink}}" class="f-fallback button" target="_blank">Join Meeting</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="body-sub" role="presentation">
+                                                <tr>
+                                                    <td>
+                                                        <p class="f-fallback sub">
+                                                            If you’re having trouble with the button above, copy and paste this URL into your browser:
+                                                        </p>
+                                                        <p class="f-fallback sub"><a href="{{meetingLink}}">{{meetingLink}}</a></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="divider"></div>
+                                            <p>Best regards,<br />The CareerGuidance Team</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                                <tr>
+                                    <td class="content-cell" align="center">
+                                        <p class="f-fallback sub align-center">
+                                            CareerGuidance, LLC<br />
+                                            1234 Career Rd., Cairo, Egypt<br />
+                                            <a href="https://example.com">Visit our website</a> |
+                                            <a href="mailto:support@careerguidance.com">Contact Support</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

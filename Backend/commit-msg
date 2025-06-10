@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Path to your commit message file
+COMMIT_MSG_FILE="$1"
+
+# Read the commit message
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# Define your commit message pattern
+PATTERN="^\[CAREERGUID-[0-9]+\]\[(Frontend|Backend|Database)\] .+"
+
+# Check if the commit message matches the pattern
+if ! echo "$COMMIT_MSG" | grep -qE "$PATTERN"; then
+    echo "Error: Commit message does not match the required format."
+    echo "Please use the format: [CAREERGUID-<number>][<Category>] message text"
+    exit 1
+fi
